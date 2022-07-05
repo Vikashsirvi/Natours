@@ -575,6 +575,7 @@ body {
   z-index: 1003;
   opacity: 0;
   width: 0;
+  visibility: collapse;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__link:link, .navigation__link:visited {
@@ -614,7 +615,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  visibility: visible; }
 
 .navigation__icon {
   position: relative;
