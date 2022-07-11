@@ -21,16 +21,35 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
+    @include respond(tab-port) {
+      width: 55%;
+    }
+    @include respond(phone) {
+      width: 80%;
+    }
   }
   &__left {
     width: 33.333333%;
     display: table-cell;
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+      padding: 4rem;
+    }
   }
   &__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(tab-port) {
+      text-align: center;
+      &:is(p) {
+        text-align: left;
+      }
+      width: 100%;
+      display: block;
+    }
   }
   &__img {
     display: block;
@@ -70,6 +89,10 @@
       display: inline-block;
       transition: all 0.2s;
       line-height: 1;
+      @include respond(tab-port) {
+        top: 1.5rem;
+        right: 1.5rem;
+      }
     }
     &:hover {
       color: $color-primary;
